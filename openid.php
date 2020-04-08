@@ -109,6 +109,11 @@ class LightOpenID
         }
     }
     
+    public function getMode()
+    {
+        return empty($this->data['openid_mode']) ? null : $this->data['openid_mode'];
+    }
+    
     function set_proxy($proxy)
     {
         if (!empty($proxy)) {
